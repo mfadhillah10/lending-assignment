@@ -1,4 +1,4 @@
-var connection = require('../db/con');
+var connection = require('../db/conn');
 
 const sqlGetFormVal = `SELECT field.keyfield, field.label, field.datatype, field.required FROM mapping
 INNER JOIN form ON mapping.form_id = form.form_id INNER JOIN field ON mapping.field_id = field.field_id
