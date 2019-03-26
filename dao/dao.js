@@ -29,12 +29,12 @@ exports.getMap = function getMap(map, callback) {
 }
 
 exports.search = function(nik, formName, callback) {
-    connection.query(sqlSearch, [nik, formName], function(error, rows) {
+    connection.query(sqlSearch, [nik, formName], function(error, data) {
         if(error) {
             console.log(error);
             return callback(error);
         }
-        callback(null, rows);
+        callback(null, data);
     });
 }
 
